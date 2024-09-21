@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,31 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+// Route::get('/', function () {
+//     return view('pages.index');
+// });
     
+//home page
+Route::get('/',[PagesController::class,'index'])->name('home');
+
+// Admin page
+Route::get('/admin/dashboard',[PagesController::class,'dashboard'])->name('admin.dashboard');
+
+Route::get('/admin/main',[PagesController::class,'main'])->name('admin.main');
+
+Route::get('/admin/services',[PagesController::class,'services'])->name('admin.services');
+
+Route::get('/admin/portfolio',[PagesController::class,'portfolio'])->name('admin.portfolio');
+
+Route::get('/admin/about',[PagesController::class,'about'])->name('admin.about');
+
+Route::get('/admin/contact',[PagesController::class,'contact'])->name('admin.contact');
+
+
+
+
+
+
 
 
 Route::get('/dashboard', function () {
