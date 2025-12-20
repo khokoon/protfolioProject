@@ -10,7 +10,7 @@
 
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                            <a href="{{ route('admin.dashboard') }}">DASHBOARD</a>
                         </li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
